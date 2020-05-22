@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+  
+
+    <table class="table table-striped" id="tabla">
+        <thead>
+          <tr>
+            <th scope="col">nombre </th>
+            <th scope="col">apellido</th>
+            <th scope="col">rut </th>
+            <th scope="col">nacimiento </th>
+            <th scope="col">edad</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{personas[0].nombre}}</td>
+            <td>{{personas[0].apellido}}</td>
+            <td>{{personas[0].run}}</td>
+            <td>{{personas[0].nacimiento}}</td>
+            <td>{{personas[0].edad}}</td>
+          </tr>
+          <tr>
+            <td>{{personas[1].nombre}}</td>
+            <td>{{personas[1].apellido}}</td>
+            <td>{{personas[1].run}}</td>
+            <td>{{personas[1].nacimiento}}</td>
+            <td>{{personas[1].edad}}</td>
+          </tr>
+          <tr>
+            <td>{{personas[2].nombre}}</td>
+            <td>{{personas[2].apellido}}</td>
+            <td>{{personas[2].run}}</td>
+            <td>{{personas[2].nacimiento}}</td>
+            <td>{{personas[2].edad}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <script>
+
+       const app = new Vue({
+        el:'#tabla',
+        data:{
+            personas:[
+                {
+                    nombre:"Jose",
+                    apellido:"perez",
+                    run:"786677-2",
+                    nacimiento:"12-4-67",
+                    edad:52,
+                },
+                {
+                    nombre:"Maria",
+                    apellido:"Rodriguez",
+                    run:"657865-6",
+                    nacimiento:"30-11-90",
+                    edad:29,
+                },
+                {
+                    nombre:"manuel",
+                    apellido:"Patiño",
+                    run:"987689-3",
+                    nacimiento:"2-12-59",
+                    edad:80,
+                }
+
+            ],
+        }
+    })
+   </script>
+</body>
+</html>
